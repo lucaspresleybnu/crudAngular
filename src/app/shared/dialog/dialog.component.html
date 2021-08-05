@@ -1,0 +1,24 @@
+<div mat-dialog-content>
+  <p>Cadastro de Turno</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Valor</mat-label>
+    <input matInput [(ngModel)]="data.value" mask="separator.2" thousandSeparator=".">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Horário Inicial</mat-label>
+    <input matInput [(ngModel)]="data.initial_shift" mask="Hh:m0">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Horário Final</mat-label>
+    <input matInput [(ngModel)]="data.final_shift" mask="Hh:m0">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="data" *ngIf="!data.id" cdkFocusInitial>Cadastrar</button>
+  <button mat-button [mat-dialog-close]="data" *ngIf="data.id" cdkFocusInitial>Atualizar</button>
+</div>

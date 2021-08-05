@@ -1,0 +1,17 @@
+.buttons-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 15px;
+}
+  
+.buttons-container .demo-button {
+    margin-left: 8px;
+}
+
+table {
+    width: 100%;
+}
+
+.table-container {
+    padding: 0 25px 25px;
+}

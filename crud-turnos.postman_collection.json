@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "35df4347-6dc7-4dac-85bd-c2628937a6f1",
+		"name": "CRUD de turnos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar / Index",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://pitsteste.velow.com.br/challenge/work_shifts?active=true",
+					"protocol": "http",
+					"host": [
+						"pitsteste",
+						"velow",
+						"com",
+						"br"
+					],
+					"path": [
+						"challenge",
+						"work_shifts"
+					],
+					"query": [
+						{
+							"key": "active",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show / Single",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://pitsteste.velow.com.br/challenge/work_shifts/2",
+					"protocol": "http",
+					"host": [
+						"pitsteste",
+						"velow",
+						"com",
+						"br"
+					],
+					"path": [
+						"challenge",
+						"work_shifts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create / Novo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"work_shift\" : {\n    \"name\": \"teste\",\n    \"initial_shift\": \"10:00\",\n    \"final_shift\": \"14:00\",\n    \"value\": 100\n  }\n}"
+				},
+				"url": {
+					"raw": "http://pitsteste.velow.com.br/challenge/work_shifts",
+					"protocol": "http",
+					"host": [
+						"pitsteste",
+						"velow",
+						"com",
+						"br"
+					],
+					"path": [
+						"challenge",
+						"work_shifts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"work_shift\" : {\n    \"name\": \"teste editado\",\n    \"initial_shift\": \"10:00\",\n    \"final_shift\": \"14:00\",\n    \"value\": 100\n  }\n}"
+				},
+				"url": {
+					"raw": "http://pitsteste.velow.com.br/challenge/work_shifts/12",
+					"protocol": "http",
+					"host": [
+						"pitsteste",
+						"velow",
+						"com",
+						"br"
+					],
+					"path": [
+						"challenge",
+						"work_shifts",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir / Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://pitsteste.velow.com.br/challenge/work_shifts/12",
+					"protocol": "http",
+					"host": [
+						"pitsteste",
+						"velow",
+						"com",
+						"br"
+					],
+					"path": [
+						"challenge",
+						"work_shifts",
+						"12"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
